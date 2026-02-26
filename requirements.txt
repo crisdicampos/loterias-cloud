@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+requests
+openpyxl
+psycopg[binary]
+python-multipart
+certifi
+

@@ -14,7 +14,16 @@ DB_CONFIG = {
 # =========================
 
 def conectar():
-    return psycopg.connect(**DB_CONFIG)
+    import os
+
+    database_url = os.environ.get("DATABASE_URL")
+
+    if database_url:
+        return psycopg.connect(database_url)
+    else:
+        return psycopg.connect(**DB_CONFIG)
+
+    #return psycopg.connect(**DB_CONFIG)
 
 
 # =========================

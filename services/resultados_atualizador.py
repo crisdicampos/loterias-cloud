@@ -31,7 +31,8 @@ def atualizar_resultados(jogo_id: int):
     # Download
     #resposta = requests.get(url)
     #resposta = requests.get(url, verify=False)
-    resposta = requests.get(url, verify=certifi.where())
+    #resposta = requests.get(url, verify=certifi.where())
+    resposta = requests.get(url, verify=certifi.where(),timeout=30)
     resposta.raise_for_status()
 
     with open(caminho_arquivo, "wb") as f:

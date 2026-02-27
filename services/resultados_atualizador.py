@@ -5,7 +5,8 @@ import os
 from datetime import datetime
 import openpyxl
 from db.db_repository import conectar
-
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def atualizar_resultados(jogo_id: int):
     print(f"\nIniciando atualização do jogo {jogo_id}...")
@@ -33,7 +34,8 @@ def atualizar_resultados(jogo_id: int):
     #resposta = requests.get(url)
     #resposta = requests.get(url, verify=False)
     #resposta = requests.get(url, verify=certifi.where())
-    resposta = requests.get(url, verify=certifi.where(),timeout=30)
+    #resposta = requests.get(url, verify=certifi.where(),timeout=30)
+    resposta = requests.get(url, timeout=30, verify=False )
     resposta.raise_for_status()
 
     with open(caminho_arquivo, "wb") as f:

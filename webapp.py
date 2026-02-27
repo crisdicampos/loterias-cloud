@@ -28,6 +28,47 @@ def render_page(msg=""):
         <title>Loterias 91/18</title>
     </head>
 
+    <head>
+        <title>Loterias 91/18</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {{
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                background: #f4f6f9;
+                margin: 0;
+                padding: 20px;
+            }}
+    
+            button {{
+                background: #2563eb;
+                color: white;
+                border: none;
+                padding: 8px 14px;
+                border-radius: 6px;
+                cursor: pointer;
+                font-size: 14px;
+            }}
+    
+            button:hover {{
+                background: #1d4ed8;
+            }}
+    
+            input[type="number"] {{
+                padding: 6px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }}
+    
+            pre {{
+                background: #ffffff;
+                padding: 12px;
+                border-radius: 8px;
+                border: 1px solid #e5e7eb;
+            }}
+        </style>
+    </head>
+
+
     <script>
     function enviarAtualizacao() {{
         var el = document.getElementById("status");

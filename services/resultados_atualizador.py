@@ -30,6 +30,10 @@ def atualizar_resultados(jogo_id: int):
     os.makedirs("downloads", exist_ok=True)
     caminho_arquivo = f"downloads/resultados_jogo_{jogo_id}.xlsx"
 
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
+    }
+
     # Download
     #resposta = requests.get(url)
     #resposta = requests.get(url, verify=False)
